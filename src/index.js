@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import PathFinder from './PathFinder';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PathFinder rows={25} columns={50} />
   </React.StrictMode>,
   document.getElementById('root')
 );
