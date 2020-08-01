@@ -3,6 +3,7 @@
     background-color: #3f4370;
     text-align: center;
     user-select: none;
+    min-width: 600px;
 }
 
 .PathFinder .Board {
