@@ -95,9 +95,6 @@ class PathFinder extends React.Component {
             update(board);
         }
 
-        console.log("destination found: ", board[this.destinationPoint[0]][this.destinationPoint[1]].distance);
-        console.log("start backtracking...");
-
         let head = board[this.destinationPoint[0]][this.destinationPoint[1]];
         while (head.i !== this.startingPoint[0] || head.j !== this.startingPoint[1]) {
             let positions = [[-1, 0], [1, 0], [0, -1], [0, 1]];
@@ -110,6 +107,11 @@ class PathFinder extends React.Component {
                 if (i >= 0 && i < this.props.rows && j >= 0 && j < this.props.columns && board[i][j].fixed && board[i][j].distance < next.distance) {
                     next = board[i][j];
                 }
+            }
+
+            if (next == head) {
+                console.log("no path");
+                break;
             }
 
             await new Promise(res => setTimeout(res, 100));
