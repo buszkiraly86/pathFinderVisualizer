@@ -5,3 +5,7 @@
 
 # production
 /build
+
+# misc
+npm-debug.log*
+.DS_Store
